@@ -1,0 +1,80 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    background: linear-gradient(120deg, hsl(0 0% 2%), hsl(0 0% 0%));
+}
+
+#stop_music{
+    display: none;
+}
+
+player-box{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: hsl(0 0% 3%);
+}
+
+player-controll i{
+    color: hsl(0 0% 90%);
+    font-size: 4rem;
+}
+player-controll i:hover{
+    color: hsl(0 0% 98%);
+    font-size: 4.2rem;
+}
+
+
+
+
+player-music-picture{
+  background-image: url(https://www.chelmsfordcommunityradio.com/wp-content/uploads/2021/01/IMG_20190709_155704-2560x1440.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    
+}
+
+player-music-filter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+        border-radius: 2rem;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+player-music-info p{
+    color: hsl(0 0% 80%);
+    font-weight: bold;
+
+}
+
+
+
+
+info{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+info p{
+    color: hsl(0 0% 55%);
+}
+info a{
+    color: hsl(0 0% 60%);
+}
