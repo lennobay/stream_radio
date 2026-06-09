@@ -12,33 +12,76 @@
 </head>
 
 <body>
+    <player-outer>
 
-    <player-box>
-        <player-music-info>
-            
-            <player-music-picture>
-              <player-music-filter>
-                 <player-controll>
-            <i id="start_music" onclick="play_radio()" class="fa-solid fa-play"></i>
-            <i  id="stop_music"onclick="stop_radio()" class="fa-solid fa-pause"></i>
-        </player-controll>
-              </player-music-filter>  
-                
 
-            </player-music-picture>
-            <p style="display: flex; align-items: center; justify-content: center;">Sommerfestradio MBG</p>
-            
+        <player-box>
+            <player-music-info>
 
-        </player-music-info>
-  
-       
-    </player-box>
+                <player-music-picture>
+                    <player-music-filter>
+                        <player-controll>
+                            <i id="start_music" onclick="play_radio()" class="fa-solid fa-play"></i>
+                            <i id="stop_music" onclick="stop_radio()" class="fa-solid fa-pause"></i>
+                        </player-controll>
+                    </player-music-filter>
 
-      <info>
-            <a href="/impressum">Impressum</a>
-            <p>|</p>
-            <a href="/agb" >AGB</a  >
-        </info>
+
+                </player-music-picture>
+
+
+
+            </player-music-info>
+
+
+        </player-box>
+        <player-info>
+
+            <i class="fa-solid fa-angle-down" onclick="window.location.href = '#about'"></i>
+        </player-info>
+    </player-outer>
+    <radio-info-outer>
+        <radio-info id="about">
+            <radio-info-box>
+                <h2>Wer sind wir? </h2>
+                <radio-info-box-inner>
+                    <p>Wir sind die Radio AG am Max Born Gymnasium und erstellen regelmäßig Sendungen. Diese entstehen
+                        in Koorperation mit dem CCR in Chelmsford. Hierbei werden die Sendungen auf Englisch
+                        ausgestrahlt und somit der Bilinguale Zug an unserer Schule unterstützt. </p>
+                </radio-info-box-inner>
+            </radio-info-box>
+            <radio-info-box>
+                <h2>Reguläre Sendungen? </h2>
+                <radio-info-box-inner>
+                    <p>Unsere Regulären Sendungen können Sie sich auf Mixcloud, ohne jegliche Kosten anhören oder direkt
+                        Live, immer Sonntags.
+                    </p>
+                    <a href="https://x.nl5.de/xn9bqj">Link zu Allen Sendungen</a>
+                    <br>
+                    <a href="https://x.nl5.de/2zshnh">Link zu Live Sendungen</a>
+                </radio-info-box-inner>
+            </radio-info-box>
+
+
+        </radio-info>
+    </radio-info-outer>
+    <br>
+
+
+    <hr>
+    <br>
+    <br>
+    <info-contrib>
+        <img style="height: 100px;"
+            onclick="window.location.href = 'https://max-born-gymnasium.de/schueler/ags/radio-ag/'"
+            src="https://scontent-fra5-2.cdninstagram.com/v/t51.2885-19/404603854_1121174712382249_6879755324262261212_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=106&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy42MDAuQzMifQ%3D%3D&_nc_ohc=B5rVaJk2mc0Q7kNvwFTop3R&_nc_oc=AdppnsXElG1SARjEIZMDez3ZE2cn2divE_VnCIfsEBoCgkWCL7j0bgb9V5rFsFA-fwV7NTJcN_n_lSHxTwEdlpVF&_nc_zt=24&_nc_ht=scontent-fra5-2.cdninstagram.com&_nc_ss=7b6a8&oh=00_Af-RKi_Huen6lgdu0slLqFq_i4WtO31mwzvHNOSK8AonKw&oe=6A2E24A2">
+        <img style="height: 100px;" onclick="window.location.href = 'https://haufenet.com'" src="logo.png">
+    </info-contrib>
+    <info>
+        <a href="/impressum">Impressum</a>
+        <p>|</p>
+        <a href="/agb">AGB</a>
+    </info>
 </body>
 
 </html>

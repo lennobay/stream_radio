@@ -1,12 +1,8 @@
 body{
-    display: flex;
     align-items: center;
     justify-content: center;
     font-family: sans-serif;
-    height: 100vh;
-    overflow: hidden;
-    flex-direction: column;
-    background: linear-gradient(120deg, hsl(0 0% 2%), hsl(0 0% 0%));
+    background: linear-gradient(120deg, hsl(199.78, 100%, 17.84%),hsl(199.78, 100%, 20.84%));
 }
 
 #stop_music{
@@ -18,10 +14,31 @@ player-box{
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    background-color: hsl(0 0% 3%);
+     height: 80vh;
 }
 
+player-outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+player-info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 20vh;
+}
+player-info p{
+    font-size: 1.2rem;
+    color: hsl(0 0% 80%);
+}
+player-info i{
+    color: hsl(0 0% 80%);
+    font-size: 3rem;
+}
 player-controll i{
+
     color: hsl(0 0% 90%);
     font-size: 4rem;
 }
@@ -38,8 +55,8 @@ player-music-picture{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 2rem;
     display: flex;
     align-items: center;
@@ -51,8 +68,8 @@ player-music-filter{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
         border-radius: 2rem;
     background-color: rgba(0, 0, 0, 0.3);
 }
@@ -77,4 +94,35 @@ info p{
 }
 info a{
     color: hsl(0 0% 60%);
+}
+radio-info-outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+radio-info{
+    max-width: 500px;
+    padding: 0.5rem ;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr;
+}
+
+radio-info-box h2{
+    color: hsl(199.78, 100%, 60.84%);
+}
+radio-info-box p{
+    color: hsl(0 0% 90%);
+}
+
+radio-info-box a{
+    color: hsl(199.78, 100%, 80.84%);
+    font-weight: bold;
+}
+info-contrib{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; gap: 50px;
 }
