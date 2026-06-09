@@ -126,3 +126,10 @@ info-contrib{
     justify-content: center;
     flex-direction: row; gap: 50px;
 }
+
+@media screen and (max-width: 3700px) {
+
+        player-box{
+            height: 60vh;
+        }
+}
