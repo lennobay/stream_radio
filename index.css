@@ -136,4 +136,7 @@ info-contrib{
         player-box{
             height: 60vh;
         }
+        player-info{
+            height: 10vh;
+        }
 }
