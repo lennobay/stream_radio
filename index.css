@@ -2,6 +2,7 @@ body{
     align-items: center;
     justify-content: center;
     font-family: sans-serif;
+    overflow-x: hidden;
     background: linear-gradient(95deg, #094b4b, #13c4c4) ;
 }
 
