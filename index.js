@@ -1,4 +1,4 @@
-const audio = new Audio("fassounds-escape-your-love-upbeat-fashion-pop-dance-412230.mp3")
+const audio = new Audio("https://services4leo.my-router.de:8443")
 
 function play_radio(){
         audio.play();
