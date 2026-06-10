@@ -2,7 +2,7 @@ body{
     align-items: center;
     justify-content: center;
     font-family: sans-serif;
-    background: linear-gradient(120deg, hsl(199.78, 100%, 17.84%),hsl(199.78, 100%, 20.84%));
+    background: linear-gradient(95deg, #094b4b, #13c4c4) ;
 }
 
 #stop_music{
@@ -34,16 +34,16 @@ player-info p{
     color: hsl(0 0% 80%);
 }
 player-info i{
-    color: hsl(0 0% 80%);
-    font-size: 3rem;
+    color: #47d8d8;
+    font-size: 5rem;
 }
 player-controll i{
 
-    color: hsl(0 0% 90%);
+    color: #094b4b;
     font-size: 4rem;
 }
 player-controll i:hover{
-    color: hsl(0 0% 98%);
+    color: #409595;
     font-size: 4.2rem;
 }
 
@@ -51,16 +51,17 @@ player-controll i:hover{
 
 
 player-music-picture{
-  background-image: url(https://www.chelmsfordcommunityradio.com/wp-content/uploads/2021/01/IMG_20190709_155704-2560x1440.jpg);
+  background-image: url(provosorisch_logo.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 300px;
-    height: 300px;
+    height: 250px;
     border-radius: 2rem;
     display: flex;
     align-items: center;
     justify-content: center; 
+    box-shadow: #094b4b 20px 20px 20px -10px  ;
     
 }
 
@@ -69,9 +70,9 @@ player-music-filter{
     align-items: center;
     justify-content: center;
     width: 300px;
-    height: 300px;
+    height: 250px;
         border-radius: 2rem;
-    background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.3)
 }
 player-music-info p{
     color: hsl(0 0% 80%);
@@ -90,7 +91,7 @@ info{
     gap: 1rem;
 }
 info p{
-    color: hsl(0 0% 55%);
+    color: hsl(0 0% 90%);
 }
 info a{
     color: hsl(0 0% 60%);
@@ -102,29 +103,32 @@ radio-info-outer{
 }
 
 radio-info{
-    max-width: 500px;
+    max-width: 1000px;
     padding: 0.5rem ;
     display: grid;
     justify-content: center;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
 }
 
 radio-info-box h2{
-    color: hsl(199.78, 100%, 60.84%);
+    color: #094b4b;
+    font-size: 2.8rem;
 }
 radio-info-box p{
-    color: hsl(0 0% 90%);
+    color: #7aeaea;
+    font-size: 1.5rem;
 }
 
 radio-info-box a{
-    color: hsl(199.78, 100%, 80.84%);
+    color: #a4f6f6;
     font-weight: bold;
+    font-size: 1.5rem;
 }
 info-contrib{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row; gap: 50px;
+    flex-direction: row; 
 }
 
 @media screen and (max-width: 370px) {
