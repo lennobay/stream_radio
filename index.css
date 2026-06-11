@@ -85,17 +85,20 @@ player-music-info p{
 
 
 info{
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
 }
 info p{
     color: hsl(0 0% 90%);
 }
 info a{
-    color: hsl(0 0% 60%);
+    color: hsl(0, 0%, 84%);
+    text-decoration: none;
+}
+info a:hover{
+    text-decoration: underline;
 }
 radio-info-outer{
     display: flex;
@@ -112,8 +115,38 @@ radio-info{
 }
 
 radio-info-box h2{
-    color: #094b4b;
+    color: #329b9b;
     font-size: 2.8rem;
+}
+impressum-outer{
+    justify-content: center;
+    align-items: center;
+
+}
+.back-button{
+     padding-left: clamp(1rem, 5rem, 10rem);
+          padding-right: clamp(1rem, 5rem, 10rem);
+          font-weight: bold;
+          color: #60c8c8;
+          font-size: 2rem;
+}
+.back-button:hover{
+    color: #38ebeb;
+
+}
+
+.impressum{
+        padding-left: clamp(1rem, 5rem, 10rem);
+                  padding-right: clamp(1rem, 5rem, 10rem);
+}
+
+.impressum h1{
+      color: #329b9b;
+    font-size: 2.8rem;
+}
+.impressum p{
+    color: #7aeaea;
+    font-size: 1.5rem;
 }
 radio-info-box p{
     color: #7aeaea;
