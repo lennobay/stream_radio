@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rMBG | Musikwunsch</title>
+    <link rel="stylesheet" href="/index.css">
+       <script src="https://kit.fontawesome.com/1e7912d6fc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <p class="back-button" onclick="window.location.href = '/'"> <i class="fa-solid fa-arrow-left-long"></i> Zum Radio</p>
+    <form-outer>
+  
+  <form>
+        <input class="form-normal-input" type="text" placeholder="Liedname" name="liedname">
+        <input  class="form-normal-input" type="text" placeholder="Interpret" name="interpret">
+        <input class="form-submit-input" type="submit" value="Versenden">
+    </form>
+    
+ </form-outer>  
+
+
+       <info>
+        <p><a href="/impressum">Impressum</a> | <a href="">Contribution</a></p> 
+        <p>Designed by Human, no AI | created & hosted by <a href="https://haufenet.com">haufenet.com</a></p>
+    </info>
+    <script>
+
+
+        const musicinput = document.querySelector("form")
+
+            musicinput.addEventListener("submit", (e) =>  {
+                e.preventDefault();
+
+
+                const formData = new FormData(musicinput)
+
+            
+                fetch("https://api.haufenet.com/unprotected/add", {
+                    "method" : "POST",
+                    "credentials" : "include",
+                    "body" : JSON.stringify({
+                        "title" : formData.get("liedname"),
+                        "interpreter" : formData.get("interpret")
+                    })
+                })
+            
+            })
+
+       
+
+    
+    </script>
+    <style>
+        form-outer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+        }
+        form{
+           display: grid;
+           grid-template-rows: 1fr 1fr 1fr ;
+           gap: 1rem;
+           max-width: 400px;
+        }
+        .form-normal-input{
+            background-color: #329b9b;
+            border: none;
+            color: #103939;
+            font-weight: bold;
+            border-radius: 2rem;
+            padding: 1rem;
+            font-size: 1.4rem;
+        }
+
+         .form-normal-input:focus{
+            outline: none;
+         }
+         .form-submit-input{
+                        background-color: #226363;
+            border: none;
+            color: #55e2e2;
+            font-weight: bold;
+            border-radius: 2rem;
+            padding: 1rem;
+            font-size: 1.5rem;
+         }
+    </style>
+
+</body>
+</html>
+
