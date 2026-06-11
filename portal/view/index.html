@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rMBG | Musikwunsch</title>
+    <link rel="stylesheet" href="/index.css">
+    <script src="https://kit.fontawesome.com/1e7912d6fc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <display-wishes>
+
+    </display-wishes>
+
+
+
+
+
+    <info>
+        <p><a href="/impressum">Impressum</a> | <a href="">Contribution</a></p>
+        <p>Designed by Human, no AI | created & hosted by <a href="https://haufenet.com">haufenet.com</a></p>
+    </info>
+    <script>
+
+        fetch("https://api.haufenet.com/auth/session", {
+            "method": "GET",
+            "credentials": "include",
+        }).then((data) => {
+            if (data.status != 202) {
+                window.location.href = "/portal"
+            }
+        })
+
+
+        fetch("https://api.haufenet.com/unprotected/all").then((data) => { return data.json() }).then((res) => {
+            for (let i = 0; i < res.length; i++) {
+                const temp = res[i]
+                document.querySelector("display-wishes").innerHTML += `
+                    <display-wishes-sub>
+                        <p><strong>Liedname:</strong> ${temp[0].title}</p>
+                        <p><strong>Interpret:</strong> ${temp[0].interpreter}</p>
+                        <button onclick="del(${temp[0].id})"> Löschen</button>
+    
+                        </display-wishes-sub>
+                    
+                
+                
+                `
+
+
+            }
+        })
+        function del(id) {
+            fetch("https://api.haufenet.com/protected/delete?id=" + id, {
+                "method": "GET",
+                "credentials": "include"
+            }).then(() => {window.location.href="/portal/view"})
+        }
+
+
+
+
+
+        const musicinput = document.querySelector("form")
+
+
+
+
+
+
+    </script>
+    <style>
+        form-outer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+        }
+
+        form {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 1rem;
+            max-width: 400px;
+        }
+
+        .form-normal-input {
+            background-color: #329b9b;
+            border: none;
+            color: #103939;
+            font-weight: bold;
+            border-radius: 2rem;
+            padding: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .form-normal-input:focus {
+            outline: none;
+        }
+
+        .form-submit-input {
+            background-color: #226363;
+            border: none;
+            color: #55e2e2;
+            font-weight: bold;
+            border-radius: 2rem;
+            padding: 1rem;
+            font-size: 1.5rem;
+        }
+    </style>
+
+</body>
+
+</html>
