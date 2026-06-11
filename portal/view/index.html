@@ -10,6 +10,12 @@
 </head>
 
 <body>
+
+
+    <p class="back-button" onclick="window.location.href = '/'"> <i class="fa-solid fa-arrow-left-long"></i> Zum Radio
+    </p>
+
+    <h2 style="display: flex; align-items: center; justify-content: center; color: #0d3030;">Liedwünsche</h2>
     <display-wishes>
 
     </display-wishes>
@@ -38,12 +44,12 @@
             for (let i = 0; i < res.length; i++) {
                 const temp = res[i]
                 document.querySelector("display-wishes").innerHTML += `
-                    <display-wishes-sub>
+                    <div class="display-wishes-sub">
                         <p><strong>Liedname:</strong> ${temp[0].title}</p>
                         <p><strong>Interpret:</strong> ${temp[0].interpreter}</p>
                         <button onclick="del(${temp[0].id})"> Löschen</button>
     
-                        </display-wishes-sub>
+                        </div>
                     
                 
                 
@@ -72,6 +78,28 @@
 
     </script>
     <style>
+
+        .display-wishes-sub p{
+            font-size: 1.4rem;
+            color: #0d3030;
+        }
+        .display-wishes-sub{
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            background-color: #2d8383;
+            padding: 1rem;
+            border-radius: 2rem;
+
+
+        }
+        .display-wishes-sub button{
+            background-color: #103939;
+            border: none;
+            font-size: 1.5rem;
+            color: #3daeae;
+            border-radius: 1.8rem;
+            
+        }
         form-outer {
             display: flex;
             align-items: center;
