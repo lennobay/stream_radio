@@ -29,15 +29,12 @@
     </info>
     <script>
 
-        fetch("https://api.haufenet.com/auth/session", {
+        fetch("https://api-rmbg.viewdns.net/auth/session", {
             "method": "GET",
             "credentials": "include",
         }).then((data) => {
-            if (data.status == 202) {
+            if (data.status != 202) {
                 window.location.href = "/portal/view"
-            }
-            else {
-                window.alert("login failed")
             }
         })
 
@@ -52,7 +49,7 @@
             const formData = new FormData(musicinput)
 
 
-            fetch("https://api.haufenet.com/auth/login", {
+            fetch("https://api-rmbg.viewdns.net/auth/login", {
                 "method": "POST",
                 "credentials": "include",
                 "body": JSON.stringify({

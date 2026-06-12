@@ -30,7 +30,7 @@
     </info>
     <script>
 
-        fetch("https://api.haufenet.com/auth/session", {
+        fetch("https://api-rmbg.viewdns.net/auth/session", {
             "method": "GET",
             "credentials": "include",
         }).then((data) => {
@@ -56,7 +56,7 @@
             }
         })
         function del(id) {
-            fetch("https://api.haufenet.com/protected/delete?id=" + id, {
+            fetch("https://api-rmbg.viewdns.net/protected/delete?id=" + id, {
                 "method": "GET",
                 "credentials": "include"
             }).then(() => {window.location.href="/portal/view"})
