@@ -31,6 +31,7 @@
 
         fetch("https://api-rmbg.viewdns.net/auth/session", {
             "method": "GET",
+            "headers": {"Content-Type": "application/json"},
             "credentials": "include",
         }).then((data) => {
         
@@ -49,6 +50,7 @@
 
             fetch("https://api-rmbg.viewdns.net/auth/login", {
                 "method": "POST",
+                "headers": {"Content-Type": "application/json"},
                 "credentials": "include",
                 "body": JSON.stringify({
                     "username": formData.get("username"),
